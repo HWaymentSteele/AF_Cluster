@@ -1,0 +1,40 @@
+PfPDO
+2108 seqs removed for containing more than 25% gaps, 2162 remaining
+eps	n_clusters	n_not_clustered
+3.00	1	540
+3.50	1	540
+4.00	1	540
+4.50	1	540
+5.00	1	540
+5.50	1	540
+6.00	2	537
+6.50	3	533
+7.00	3	532
+7.50	3	534
+8.00	6	521
+8.50	7	519
+9.00	6	516
+9.50	12	501
+10.00	10	501
+10.50	20	468
+11.00	21	459
+11.50	26	439
+12.00	30	430
+12.50	32	391
+13.00	42	353
+13.50	45	259
+14.00	40	224
+14.50	37	185
+15.00	28	110
+15.50	14	60
+16.00	11	28
+16.50	3	7
+17.00	2	4
+17.50	1	0
+Selected eps=13.50
+2162 total seqs
+135 clusters, 515 of 2162 not clustered (0.24)
+avg identity to query of unclustered: 0.33
+avg identity to query of clustered: 0.36
+wrote clustering data to msas//PfPDO_clustering_assignments.tsv
+wrote cluster metadata to msas//PfPDO_cluster_metadata.tsv

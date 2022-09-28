@@ -1,0 +1,11 @@
+eps3
+1021 seqs removed for containing more than 25% gaps, 7137 remaining
+Selected eps=3.00
+7137 total seqs
+21 clusters, 6942 of 7137 not clustered (0.97)
+avg identity to query of unclustered: 0.42
+avg identity to query of clustered: 0.47
+Running TSNE ...
+Saved TSNE plot to msas/eps3_TSNE.pdf
+wrote clustering data to msas/eps3_clustering_assignments.tsv
+wrote cluster metadata to msas/eps3_cluster_metadata.tsv

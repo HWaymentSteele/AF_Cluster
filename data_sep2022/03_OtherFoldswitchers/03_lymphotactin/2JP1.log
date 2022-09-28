@@ -1,0 +1,27 @@
+2JP1
+3108 seqs removed for containing more than 25% gaps, 1305 remaining
+eps	n_clusters	n_not_clustered
+3.00	2	323
+3.50	2	323
+4.00	2	323
+4.50	4	316
+5.00	4	313
+5.50	4	306
+6.00	6	307
+6.50	6	300
+7.00	6	291
+7.50	8	268
+8.00	10	244
+8.50	11	225
+9.00	22	166
+9.50	18	127
+10.00	4	44
+10.50	2	12
+11.00	1	0
+Selected eps=9.00
+1305 total seqs
+57 clusters, 357 of 1305 not clustered (0.27)
+avg identity to query of unclustered: 0.26
+avg identity to query of clustered: 0.32
+wrote clustering data to msas/2JP1_clustering_assignments.tsv
+wrote cluster metadata to msas/2JP1_cluster_metadata.tsv

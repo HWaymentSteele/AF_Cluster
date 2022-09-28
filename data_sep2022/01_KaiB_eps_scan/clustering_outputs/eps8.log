@@ -1,0 +1,9 @@
+eps8
+1021 seqs removed for containing more than 25% gaps, 7137 remaining
+Selected eps=8.00
+7137 total seqs
+178 clusters, 1079 of 7137 not clustered (0.15)
+avg identity to query of unclustered: 0.38
+avg identity to query of clustered: 0.43
+wrote clustering data to msas/eps8_clustering_assignments.tsv
+wrote cluster metadata to msas/eps8_cluster_metadata.tsv

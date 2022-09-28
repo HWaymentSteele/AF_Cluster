@@ -1,0 +1,27 @@
+2QKEE
+1021 seqs removed for containing more than 25% gaps, 7137 remaining
+eps	n_clusters	n_not_clustered
+3.00	4	1764
+3.50	5	1751
+4.00	10	1721
+4.50	21	1677
+5.00	18	1661
+5.50	25	1587
+6.00	36	1483
+6.50	57	1357
+7.00	68	1124
+7.50	64	823
+8.00	66	534
+8.50	47	328
+9.00	19	178
+9.50	7	65
+10.00	2	20
+10.50	2	3
+11.00	1	0
+Selected eps=7.00
+7137 total seqs
+329 clusters, 2628 of 7137 not clustered (0.37)
+avg identity to query of unclustered: 0.39
+avg identity to query of clustered: 0.43
+wrote clustering data to msas_for_controls/2QKEE_clustering_assignments.tsv
+wrote cluster metadata to msas_for_controls/2QKEE_cluster_metadata.tsv
