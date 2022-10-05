@@ -13,15 +13,11 @@ Data corresponding to targets predicted in Wayment-Steele, Ovchinnikov, Colwell,
 
 `03_OtherFoldswitchers`: Other fold-switching proteins:
 
-	-RfaH
-
-	-Mad2
-
-	-Selecase
-
-	-Lymphotactin
-
-	-CLIC1
+	- RfaH
+	- Mad2
+	- Selecase
+	- Lymphotactin
+	- CLIC1
 
 `04_Thioredoxins`: DsbE identified by scanning with AFcluster and follow-up analyses on homologues and other thioredoxins
 
