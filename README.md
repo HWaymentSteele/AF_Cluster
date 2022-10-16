@@ -4,7 +4,7 @@ Code and data corresponding to Wayment-Steele, Ovchinnikov, Colwell, Kern (2022)
 
 ## Usage
 
-### To cluster alignment and write sub-MSAs:
+### To cluster MSA and generate subsampled MSA files:
 
 `python scripts/ClusterMSA.py EX -i initial_msa.a3m -o msas`
 
