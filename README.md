@@ -1,10 +1,10 @@
 # AF-Cluster
 
-Code and data corresponding to Wayment-Steele, Ovchinnikov, Colwell, Kern (2022) "Discovering putative fold-switching proteins using AlphaFold2".
+Code and data corresponding to Wayment-Steele, Ovchinnikov, Colwell, Kern (2022) "Prediction of multiple conformational states by combining sequence clustering with AlphaFold2".
 
-## Script usage
+## Usage
 
-### To cluster alignment and write sub-MSAs:
+### To cluster MSA and generate subsampled MSA files:
 
 `python scripts/ClusterMSA.py EX -i initial_msa.a3m -o msas`
 
