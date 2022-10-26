@@ -3,7 +3,6 @@ import sys, os, argparse
 import pandas as pd
 import mdtraj as md
 import numpy as np
-import gnuplotlib as gp
 import matplotlib.pyplot as plt
 from polyleven import levenshtein
 
@@ -65,6 +64,7 @@ if __name__=='__main__':
     p.add_argument("-o", action="store", default='pdb_features.json.zip', help='name of output file.')
     p.add_argument("--test", action='store_true', help='Tests first 10 decoys.')
     p.add_argument('--ref_struct', action='store', help='PDB reference structure.')
+    p.add_argument('--plot_results', action='store', help='Plot results.')
 
     args = p.parse_args()
 
@@ -76,43 +76,42 @@ if __name__=='__main__':
     if args.test:
         df = df.iloc[:10]
 
-    ref_obj = md.load_pdb(args.ref_struct)
-    ref_dssp = calc_dssp(ref_obj)
 
     df['pLDDT_vector'] = df.parallel_apply(lambda row: read_b_factor(row['pdb']), axis=1)
     df['mean_pLDDT'] = df.parallel_apply(lambda row: np.mean(row['pLDDT_vector']), axis=1)
-
-    df['rmsd_ref'] = df.parallel_apply(lambda row: calc_rmsd(row['pdb'], ref_obj), axis=1)
     df['dssp_string'] = df.parallel_apply(lambda row: calc_dssp(row['pdb']), axis=1)
-    df['dist_dssp'] = df.parallel_apply(lambda row: levenshtein(row['dssp_string'], ref_dssp), axis=1)
+
+    if args.ref_struct is not None:
+        pdb_name = os.path.basename(args.ref_struct).replace('.pdb','')
+        df['rmsd_ref'] = df.parallel_apply(lambda row: calc_rmsd(row['pdb'], ref_obj), axis=1)
+
+        ref_obj = md.load_pdb(args.ref_struct)
+        ref_dssp = calc_dssp(ref_obj)
+        df['dist_dssp'] = df.parallel_apply(lambda row: levenshtein(row['dssp_string'], ref_dssp), axis=1)
+        
     df.head()
 
-    pdb_name = os.path.basename(args.ref_struct).replace('.pdb','')
+    if args.plot_results and args.ref_struct is not None:
+        plt.figure(figsize=(8,4))
+        plt.subplot(1,2,1)
+        plt.scatter(df['rmsd_ref'].to_numpy(), df['mean_pLDDT'].to_numpy())
+        for _, row in df.iterrows():
+            plt.text(row['rmsd_ref'], row['mean_pLDDT'], os.path.basename(row['pdb'].replace('.pdb','').split('_')[-1]))
+        plt.xlabel('RMSD to ref')
+        plt.ylim([0,100])
+        plt.title(pdb_name)
+        plt.ylabel('pLDDT')
 
-    gp.plot(df['rmsd_ref'].to_numpy(), df['mean_pLDDT'].to_numpy(), _with='points pointtype 102', terminal = 'dumb 80,40',xlabel=pdb_name+' RMSD')
-    
-    gp.plot(df['dist_dssp'].to_numpy(), df['mean_pLDDT'].to_numpy(), _with='points pointtype 102', terminal = 'dumb 80,40',xlabel=pdb_name+' dssp dist')
+        plt.subplot(1,2,2)
+        plt.scatter(df['dist_dssp'].to_numpy(), df['mean_pLDDT'].to_numpy())
+        for _, row in df.iterrows():
+            plt.text(row['dist_dssp'], row['mean_pLDDT'], os.path.basename(row['pdb'].replace('.pdb','').split('_')[-1]))
+        plt.xlabel('dist plddt to ref')
+        plt.ylim([0,100])
+        plt.xlim([0, len(ref_dssp)])
 
-    plt.figure(figsize=(8,4))
-    plt.subplot(1,2,1)
-    plt.scatter(df['rmsd_ref'].to_numpy(), df['mean_pLDDT'].to_numpy())
-    for _, row in df.iterrows():
-        plt.text(row['rmsd_ref'], row['mean_pLDDT'], os.path.basename(row['pdb'].replace('.pdb','').split('_')[-1]))
-    plt.xlabel('RMSD to ref')
-    plt.ylim([0,100])
-    plt.title(pdb_name)
-    plt.ylabel('pLDDT')
-
-    plt.subplot(1,2,2)
-    plt.scatter(df['dist_dssp'].to_numpy(), df['mean_pLDDT'].to_numpy())
-    for _, row in df.iterrows():
-        plt.text(row['dist_dssp'], row['mean_pLDDT'], os.path.basename(row['pdb'].replace('.pdb','').split('_')[-1]))
-    plt.xlabel('dist plddt to ref')
-    plt.ylim([0,100])
-    plt.xlim([0, len(ref_dssp)])
-
-    plt.ylabel('pLDDT')
-    plt.savefig('%s_plddt_vs_rmsd.pdf' % pdb_name,bbox_inches='tight')
+        plt.ylabel('pLDDT')
+        plt.savefig('%s_plddt_vs_rmsd.pdf' % pdb_name,bbox_inches='tight')
 
     df.to_json(args.o)
     print('Wrote to', args.o)
