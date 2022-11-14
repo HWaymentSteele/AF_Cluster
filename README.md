@@ -38,11 +38,11 @@ Outputs a directory named `msas` that contains
 
 To also perform PCA and/or tSNE embedding at the same time and save it in `EX_clustering_assignments.tsv` for later analysis:
 
-`python scripts/WriteDBscanClusters.py -i <my_alignment.a3m> -o <outdir> --run_PCA`
+`python scripts/ClusterMSA.py -i <my_alignment.a3m> -o <outdir> --run_PCA`
 
 or 
 
-`python scripts/WriteDBscanClusters.py -i <my_alignment.a3m> -o <outdir> --run_tSNE`
+`python scripts/ClusterMSA.py -i <my_alignment.a3m> -o <outdir> --run_tSNE`
 
 
 Example output for KaiB:
