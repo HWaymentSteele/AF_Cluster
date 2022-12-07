@@ -4,6 +4,10 @@ Code and data corresponding to Wayment-Steele, Ovchinnikov, Colwell, Kern (2022)
 
 ## Usage
 
+### To generate MSA:
+
+All MSAs used in this manuscript were generated using the [ColabFold notebook](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb).
+
 ### To cluster MSA and generate subsampled MSA files:
 
 `python scripts/ClusterMSA.py EX -i initial_msa.a3m -o msas`
