@@ -2,6 +2,7 @@
 
 Code and data corresponding to Wayment-Steele, Ovchinnikov, Colwell, Kern (2022) "Prediction of multiple conformational states by combining sequence clustering with AlphaFold2".
 
+[ed. Jan 2023] Run the entirety of the script in a Colab Notebook [here](https://colab.research.google.com/github/HWaymentSteele/AF_Cluster/blob/main/AFcluster.ipynb)!
 ## Usage
 
 ### To generate MSA:
