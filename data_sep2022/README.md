@@ -1,6 +1,6 @@
 ## Readme
 
-Data corresponding to targets predicted in Wayment-Steele, Ovchinnikov, Colwell, Kern (2022) "Discovering putative fold-switching proteins using AlphaFold2".
+Data corresponding to targets predicted in Wayment-Steele, Ovchinnikov, Colwell, Kern (2022) "Prediction of multiple conformational states by combining sequence clustering with AlphaFold2".
 
 
 ### KaiB
