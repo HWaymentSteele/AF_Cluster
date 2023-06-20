@@ -66,7 +66,7 @@ def consensusVoting(seqs):
 def encode_seqs(seqs, max_len=108, alphabet=None):
     
     if alphabet is None:
-        alphabet = "ACDEFGHIKLMNPQRSTVY-"
+        alphabet = "ACDEFGHIKLMNPQRSTVWY-"
     
     arr = np.zeros([len(seqs), max_len, len(alphabet)])
     for j, seq in enumerate(seqs):
