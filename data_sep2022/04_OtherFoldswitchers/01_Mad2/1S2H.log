@@ -1,0 +1,38 @@
+1S2H
+961 seqs removed for containing more than 25% gaps, 1902 remaining
+eps	n_clusters	n_not_clustered
+3.00	1	476
+3.50	1	476
+4.00	2	472
+4.50	3	469
+5.00	1	476
+5.50	5	458
+6.00	11	421
+6.50	13	421
+7.00	16	395
+7.50	15	379
+8.00	19	339
+8.50	16	320
+9.00	18	306
+9.50	25	284
+10.00	22	264
+10.50	21	249
+11.00	27	208
+11.50	33	176
+12.00	30	135
+12.50	31	101
+13.00	25	76
+13.50	13	62
+14.00	10	40
+14.50	8	21
+15.00	4	13
+15.50	3	10
+16.00	2	3
+16.50	1	0
+Selected eps=11.50
+1902 total seqs
+95 clusters, 324 of 1902 not clustered (0.17)
+avg identity to query of unclustered: 0.38
+avg identity to query of clustered: 0.46
+wrote clustering data to msas//1S2H_clustering_assignments.tsv
+wrote cluster metadata to msas//1S2H_cluster_metadata.tsv

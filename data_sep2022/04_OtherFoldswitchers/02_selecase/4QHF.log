@@ -1,0 +1,30 @@
+4QHF
+2070 seqs removed for containing more than 25% gaps, 331 remaining
+eps	n_clusters	n_not_clustered
+3.00	1	83
+3.50	1	83
+4.00	1	83
+4.50	1	83
+5.00	1	83
+5.50	1	83
+6.00	1	83
+6.50	1	83
+7.00	1	83
+7.50	4	74
+8.00	4	74
+8.50	2	79
+9.00	6	66
+9.50	7	60
+10.00	8	57
+10.50	7	40
+11.00	6	21
+11.50	4	11
+12.00	3	4
+12.50	1	0
+Selected eps=10.00
+331 total seqs
+22 clusters, 133 of 331 not clustered (0.40)
+avg identity to query of unclustered: 0.28
+avg identity to query of clustered: 0.30
+wrote clustering data to msas/4QHF_clustering_assignments.tsv
+wrote cluster metadata to msas/4QHF_cluster_metadata.tsv
