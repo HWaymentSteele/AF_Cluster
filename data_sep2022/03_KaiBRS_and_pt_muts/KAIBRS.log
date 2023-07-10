@@ -1,0 +1,27 @@
+KAIBRS
+1037 seqs removed for containing more than 25% gaps, 7167 remaining
+eps	n_clusters	n_not_clustered
+3.00	2	1789
+3.50	4	1775
+4.00	11	1746
+4.50	14	1727
+5.00	23	1676
+5.50	35	1557
+6.00	47	1460
+6.50	44	1361
+7.00	59	1118
+7.50	65	834
+8.00	62	594
+8.50	47	375
+9.00	34	201
+9.50	10	86
+10.00	3	17
+10.50	2	2
+11.00	1	0
+Selected eps=7.50
+7167 total seqs
+249 clusters, 1914 of 7167 not clustered (0.27)
+avg identity to query of unclustered: 0.38
+avg identity to query of clustered: 0.43
+wrote clustering data to msas/KAIBRS_clustering_assignments.tsv
+wrote cluster metadata to msas/KAIBRS_cluster_metadata.tsv
