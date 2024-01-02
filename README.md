@@ -4,7 +4,10 @@ Code and data corresponding to Wayment-Steele*, Ojoawo*, ... Ovchinnikov, Colwel
 
 [original bioRxiv](https://www.biorxiv.org/content/10.1101/2022.10.17.512570v1)
 
-[ed. Jan 2023] Run the entirety of the script in a Colab Notebook [here](https://colab.research.google.com/github/HWaymentSteele/AF_Cluster/blob/main/AFcluster.ipynb)!
+[Jan 2023] Run the entirety of the script in a Colab Notebook [here](https://colab.research.google.com/github/HWaymentSteele/AF_Cluster/blob/main/AFcluster.ipynb)!
+
+[Jan 2024] An exact set of methods to reproduce every structure prediction in the paper can be found [here](https://github.com/HWaymentSteele/AF_Cluster/complete_methods.md).
+
 ## Usage
 
 ### To generate MSA:
