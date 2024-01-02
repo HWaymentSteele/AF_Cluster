@@ -6,7 +6,7 @@ Code and data corresponding to Wayment-Steele*, Ojoawo*, ... Ovchinnikov, Colwel
 
 [Jan 2023] Run the entirety of the script in a Colab Notebook [here](https://colab.research.google.com/github/HWaymentSteele/AF_Cluster/blob/main/AFcluster.ipynb)!
 
-[Jan 2024] An exact set of methods to reproduce every structure prediction in the paper can be found [here](https://github.com/HWaymentSteele/AF_Cluster/blob/complete_methods.md).
+[Jan 2024] An exact set of methods to reproduce every structure prediction in the paper can be found [here](https://github.com/HWaymentSteele/AF_Cluster/blob/567f2c85213d0aaf81834cec144a662d113d7d62/complete_methods.md).
 
 ## Usage
 
