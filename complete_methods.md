@@ -23,6 +23,8 @@ AF-Cluster models of KaiBTE. Generated using run_af2.py, model 1, 3 recycles, MS
 
 Models of 4 KaiB variants. Generated using run_af2.py, model 1, 3 recycles, “closest-10” MSAs (closest 10 sequences in phylogenetic tree by edit distance).
 
+Note that this MSA was not generated in the ColabFold/MMseqs routine, but rather in the process of constructing the KaiB phylogenetic tree, detailed in the paper Methods under "Phylogenetic tree construction".
+
 ```python run_af2.py AF_Cluster/data_sep2022/02_KaiB_fromPhylTree/msas/WP_069333443.1.a3m --model_num 1 --recycles 3 --output_dir .```
 
 R. sphaeroides:	WP_069333443
