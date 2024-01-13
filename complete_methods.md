@@ -162,3 +162,15 @@ Performed in colabfold, using 16 seeds, 3 recycles, 5 models, use_dropout=True.
 
 Note: in this .zip, .pickle files were not uploaded due to file size.
 
+## Followup on KaiBTV-4
+
+Testking KaiBTV-4 predictions across all models and recycles up to 12. Below, \<NUM\> = 1-5, \<N_RECYCLES\>=0-12.
+
+"local 10" MSA:
+```python run_af2.py data_sep2022/06_kaibtv4_followup/msas/kaibtv4_local10.a3m --model_num <NUM> --recycles <N_RECYCLES> --output_dir .```
+
+Single sequence mode:
+```python run_af2.py data_sep2022/06_kaibtv4_followup/msas/kaibtv4_single_seq.a3m --model_num <NUM> --recycles <N_RECYCLES> --output_dir .```
+
+Column-scrambled replicate, \<REP\>=0-9:
+```python run_af2.py data_sep2022/06_kaibtv4_followup/msas/scrambled/scramble_<REP>.a3m --model_num <NUM> --recycles <N_RECYCLES> --output_dir .```
