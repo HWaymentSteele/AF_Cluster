@@ -1,6 +1,6 @@
 # AF-Cluster
 
-Code and data corresponding to Wayment-Steele*, Ojoawo*, ... Ovchinnikov, Colwell, Kern (2023) "Predicting multiple conformations via sequence clustering with AlphaFold2" *Nature*. [link](https://www.nature.com/articles/s41586-023-06832-9) 
+Code and data corresponding to Wayment-Steele*, Ojoawo*, ... Ovchinnikov, Colwell, Kern (2023) "Predicting multiple conformations via sequence clustering with AlphaFold2" *Nature*. [link](https://www.nature.com/articles/s41586-023-06832-9)
 
 [original bioRxiv](https://www.biorxiv.org/content/10.1101/2022.10.17.512570v1)
 
@@ -50,7 +50,7 @@ To also perform PCA and/or tSNE embedding at the same time and save it in `EX_cl
 
 `python scripts/ClusterMSA.py -i <my_alignment.a3m> -o <outdir> --run_PCA`
 
-or 
+or
 
 `python scripts/ClusterMSA.py -i <my_alignment.a3m> -o <outdir> --run_tSNE`
 
@@ -92,7 +92,7 @@ See https://github.com/jproney/AF2Rank for more information on compiling an Alph
 
 ### To calculate RMSD to provided reference structure(s):
 
-`python scripts/CalculateModelFeatures.py path/to/pdbs/* -o <my_output_file>.json.zip --ref_struct REF_PDB_1.pdb REF_PDB_2.pdb`
+`python scripts/CalculateModelFeatures.py path/to/pdbs/* -o <my_output_file>.json --ref_struct REF_PDB.pdb`
 
 ### To reproduce figures in preprint:
 
