@@ -32,7 +32,7 @@ def calc_rmsd(decoy, ref_obj, debug=False):
     string='name CA and ('+ ' or '.join("resid %d" % x for x in ref_atoms)+')'
 
     if debug:
-        
+
         print(ref_seq)
         print(decoy_seq)
         if len(decoy.top.select(string)) != len(ref_obj.top.select(string)):
@@ -83,12 +83,12 @@ if __name__=='__main__':
 
     if args.ref_struct is not None:
         pdb_name = os.path.basename(args.ref_struct).replace('.pdb','')
+        ref_obj = md.load_pdb(args.ref_struct)
         df['rmsd_ref'] = df.parallel_apply(lambda row: calc_rmsd(row['pdb'], ref_obj), axis=1)
 
-        ref_obj = md.load_pdb(args.ref_struct)
         ref_dssp = calc_dssp(ref_obj)
         df['dist_dssp'] = df.parallel_apply(lambda row: levenshtein(row['dssp_string'], ref_dssp), axis=1)
-        
+
     df.head()
 
     if args.plot_results and args.ref_struct is not None:
@@ -115,4 +115,3 @@ if __name__=='__main__':
 
     df.to_json(args.o)
     print('Wrote to', args.o)
-
