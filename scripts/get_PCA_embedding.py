@@ -38,8 +38,8 @@ msa = msa.reshape(msa.shape[0],-1)
 mdl = PCA()
 pca_c = mdl.fit_transform(msa)
 
-df = pd.DataFrame('ID': names, 'PC 1': pca_c[:,0],'PC 2': pca_c[:,1],
-    'PC 3': pca_c[:,2], 'PC 4': pca_c[:,3])
+df = pd.DataFrame({'ID': names, 'PC 1': pca_c[:,0],'PC 2': pca_c[:,1],
+    'PC 3': pca_c[:,2], 'PC 4': pca_c[:,3]})
 
 df.to_json('df_with_PCs.json.zip')
 
