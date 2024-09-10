@@ -4,9 +4,13 @@ Code and data corresponding to Wayment-Steele*, Ojoawo*, ... Ovchinnikov, Colwel
 
 [original bioRxiv](https://www.biorxiv.org/content/10.1101/2022.10.17.512570v1)
 
-[Jan 2023] Run the entirety of the script in a Colab Notebook [here](https://colab.research.google.com/github/HWaymentSteele/AF_Cluster/blob/main/AFcluster.ipynb)!
+[Aug 2024] AF-Cluster can be combined with random seeds and MSA subsampling in [this Colab Notebook](https://colab.research.google.com/github/HWaymentSteele/AF_Cluster/blob/main/AF_cluster_in_colabdesign.ipynb)
 
 [Jan 2024] An exact set of methods to reproduce every structure prediction in the paper can be found [here](https://github.com/HWaymentSteele/AF_Cluster/blob/567f2c85213d0aaf81834cec144a662d113d7d62/complete_methods.md).
+
+[Jan 2023] (DEP, use ColabDesign based notebook above). Run the entirety of the script in a Colab Notebook [here](https://colab.research.google.com/github/HWaymentSteele/AF_Cluster/blob/main/AFcluster.ipynb)!
+
+
 
 ## Usage
 
