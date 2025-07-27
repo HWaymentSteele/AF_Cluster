@@ -50,10 +50,10 @@ if __name__=='__main__':
     p.add_argument('--eps_val', action='store', type=float, help="Use single value for eps instead of scanning.")
     p.add_argument('--resample', action='store_true', help='If included, will resample the original MSA with replacement before writing.')
     p.add_argument("--gap_cutoff", action='store', type=float, default=0.25, help='Remove sequences with gaps representing more than this frac of seq.')
-    p.add_argument('--min_eps', action='store',default=3, help='Min epsilon value to scan for DBSCAN (Default 3).')
-    p.add_argument('--max_eps', action='store',default=20, help='Max epsilon value to scan for DBSCAN (Default 20).')
-    p.add_argument('--eps_step', action='store',default=.5, help='step for epsilon scan for DBSCAN (Default 0.5).')
-    p.add_argument('--min_samples', action='store',default=3, help='Default min_samples for DBSCAN (Default 3, recommended no lower than that).')
+    p.add_argument('--min_eps', action='store',default=3, type=int, help='Min epsilon value to scan for DBSCAN (Default 3).')
+    p.add_argument('--max_eps', action='store',default=20, type=int, help='Max epsilon value to scan for DBSCAN (Default 20).')
+    p.add_argument('--eps_step', action='store',default=.5, type=float, help='step for epsilon scan for DBSCAN (Default 0.5).')
+    p.add_argument('--min_samples', action='store',default=3, type=int, help='Default min_samples for DBSCAN (Default 3, recommended no lower than that).')
 
     p.add_argument('--run_PCA', action='store_true', help='Run PCA on one-hot embedding of sequences and store in output_cluster_metadata.tsv')
     p.add_argument('--run_TSNE', action='store_true', help='Run TSNE on one-hot embedding of sequences and store in output_cluster_metadata.tsv')
@@ -197,7 +197,7 @@ if __name__=='__main__':
 
     if args.run_TSNE:
         lprint('Running TSNE ...',f)
-        ohe_vecs = encode_seqs(df.sequence.tolist()+[query_.sequence.tolist()], max_len=L)
+        ohe_vecs = encode_seqs(df.sequence.tolist()+query_.sequence.tolist(), max_len=L)
         # different than PCA because tSNE doesn't have .transform attribute
 
         mdl = TSNE()
